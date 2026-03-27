@@ -1,0 +1,299 @@
+/* RESET */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family: 'Open Sans', sans-serif;
+  color:#333;
+}
+
+/* CONTAINER */
+.container{
+  width:90%;
+  max-width:1100px;
+  margin:auto;
+}
+/* NAVBAR - PROFESSIONAL UPDATE */
+.navbar {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    padding: 15px 0;
+    transition: 0.3s;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.logo {
+    font-family: 'Raleway', sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: #4f46e5;
+    letter-spacing: 1px;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-menu li {
+    position: relative;
+    transition: transform 0.2s;
+}
+
+.nav-menu li:hover {
+    transform: translateY(-2px);
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    position: relative;
+    transition: color 0.3s;
+}
+
+.nav-menu a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0%;
+    height: 2px;
+    background: #4f46e5;
+    transition: 0.3s;
+}
+
+.nav-menu a:hover {
+    color: #4f46e5;
+}
+
+.nav-menu a:hover::after {
+    width: 100%;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+    .nav-menu {
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 10px;
+    }
+}
+
+/* HERO */
+.hero{
+  background-size:cover;
+  background-position:center;
+  color:#fff;
+  text-align:center;
+  padding:100px 0;
+}
+
+.profile img{
+  width:150px;
+  border-radius:50%;
+  border:5px solid #fff;
+}
+
+.hero h1{
+  margin-top:20px;
+  font-family:'Raleway', sans-serif;
+}
+
+.social i{
+  font-size:24px;
+  margin:10px;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.social i:hover{
+  transform:translateY(-5px);
+}
+
+/* ABOUT */
+#about{
+  padding:60px 0;
+}
+
+#about h2{
+  font-family:'Raleway', sans-serif;
+  color:#4f46e5;
+}
+
+#about h4{
+  margin-top:10px;
+}
+
+#about p{
+  margin-top:10px;
+}
+
+/* SKILL */
+.skill{
+  margin-top:15px;
+}
+
+.skill-bar{
+  width:100%;
+  height:10px;
+  background:#ddd;
+  border-radius:20px;
+}
+
+.skill-fill{
+  height:100%;
+  background:#4f46e5;
+  border-radius:20px;
+}
+
+/* SERVICES */
+#services{
+  padding:60px 0;
+}
+
+#services h2{
+  text-align:center;
+  color:#4f46e5;
+  font-family:'Raleway', sans-serif;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+  margin-top:30px;
+}
+
+/* CARD */
+.card{
+  padding:25px;
+  border-radius:10px;
+  background:#fff;
+  box-shadow:0 5px 15px rgba(0,0,0,0.1);
+  text-align:center;
+  transition:0.3s;
+}
+
+.card:hover{
+  background:#4f46e5;
+  color:#fff;
+  transform:translateY(-8px);
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+
+  .grid{
+    grid-template-columns:1fr;
+  }
+
+  .nav-menu{
+    display:none;
+  }
+
+}
+/* Full stack */
+#fullstack {
+  padding: 50px 20px;
+}
+
+/* INTRO BOX */
+.fullstack-intro {
+  background: #f4f6f9;
+  padding: 20px;
+  border-left: 5px solid #ff6b6b;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+
+.fullstack-intro h3 {
+  margin-bottom: 10px;
+}
+
+.fullstack-intro p {
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+/* TECH CARDS */
+.tech-box {
+  background: #fff;
+  padding: 20px;
+  margin-bottom: 25px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.tech-box:hover {
+  transform: translateY(-5px);
+}
+
+.tech-box pre {
+  background: #1e1e1e;
+  color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+/* ICONS */
+#fullstack i {
+  margin-right: 8px;
+}
+body {
+  font-family: Arial;
+  padding: 20px;
+}
+
+pre {
+  background: #1e1e1e;
+  color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+}
+.navbar {
+  background: #fff;
+  padding: 15px 0;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.nav-menu a:hover {
+  color: #ff6b6b;
+}

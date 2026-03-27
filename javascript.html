@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Basics</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7f9;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        .navbar {
+            background-color: #1b1b1b;
+            color: #fff;
+            padding: 15px 30px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .navbar .logo {
+            font-weight: 600;
+            font-size: 24px;
+        }
+        
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            margin: 0;
+        }
+        
+        .navbar li:hover {
+            transform: scale(1.1);
+        }
+        
+        .navbar a {
+            color: #fff;
+            font-weight: 500;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+        
+        h1,
+        h2,
+        h3 {
+            color: #222;
+        }
+        
+        pre {
+            background-color: #1e1e1e;
+            padding: 20px;
+            border-radius: 8px;
+            overflow-x: auto;
+            font-family: 'Courier New', monospace;
+            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.15);
+            border-left: 5px solid #007BFF;
+        }
+        
+        .selector {
+            color: #569CD6;
+        }
+        
+        .property {
+            color: #CE9178;
+        }
+        
+        .value {
+            color: #6A9955;
+        }
+        
+        .comment {
+            color: #6A9955;
+            font-style: italic;
+        }
+        
+        .text {
+            color: #f8f8f2;
+        }
+        
+        .rendered {
+            background-color: #fff;
+            padding: 20px;
+            border-left: 5px solid #28a745;
+            border-radius: 6px;
+            margin-top: 20px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .summary {
+            background-color: #e8f5e9;
+            padding: 15px 20px;
+            border-left: 5px solid #28a745;
+            border-radius: 6px;
+            margin-top: 20px;
+        }
+        
+        @media screen and (max-width:768px) {
+            .navbar ul {
+                flex-direction: column;
+                gap: 10px;
+                margin-top: 10px;
+            }
+        }
+        
+        button {
+            padding: 8px 15px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="logo">Younash</div>
+        <ul>
+            <li><a href="base.html">Home</a></li>
+            <li><a href="html.html">HTML</a></li>
+            <li><a href="css.html">CSS</a></li>
+            <li><a href="bootstrap.html">Bootstrap</a></li>
+            <li><a href="javascript.html">JavaScript</a></li>
+            <li><a href="project.html">Project Demo</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>JavaScript Basics</h1>
+
+        <p>
+            JavaScript is a high-level, interpreted programming language. Originally designed to make web pages interactive, it has evolved into a versatile tool used for everything from server-side development to mobile apps.
+        </p>
+
+        <h3>What does it actually do?</h3>
+        <ul>
+            <li><strong>Interactivity:</strong> Dropdown menus, image carousels, and "Like" buttons.</li>
+            <li><strong>Asynchronous Loading (AJAX):</strong> Update parts of a page without refreshing the whole screen.</li>
+            <li><strong>Animations:</strong> Smooth transitions, 2D/3D graphics, and game logic in the browser.</li>
+            <li><strong>Data Handling:</strong> Validate forms before sending, manipulate DOM elements dynamically.</li>
+        </ul>
+
+        <h2>JavaScript Example</h2>
+
+        <h3>Simple Button Alert</h3>
+        <pre>
+<span class="comment">// JavaScript example</span>
+&lt;button onclick="showMsg()"&gt;Click Me&lt;/button&gt;
+
+&lt;script&gt;
+function showMsg() {
+  alert("Hello from JavaScript!");
+}
+&lt;/script&gt;
+        </pre>
+
+        <div class="rendered">
+            <button onclick="showMsg()">Click Me</button>
+        </div>
+
+        <script>
+            function showMsg() {
+                alert("Hello from JavaScript!");
+            }
+        </script>
+
+        <h3>Summary</h3>
+        <div class="summary">
+            JavaScript adds interactivity, animations, asynchronous updates, and data handling capabilities to web pages.<br> Use JS by adding <code>&lt;script&gt;</code> tags or external JS files.<br> You can manipulate HTML, CSS, and respond to user
+            actions dynamically.
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Basics</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7f9;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        .navbar {
+            background-color: #1b1b1b;
+            color: #fff;
+            padding: 15px 30px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .navbar .logo {
+            font-weight: 600;
+            font-size: 24px;
+        }
+        
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            margin: 0;
+        }
+        
+        .navbar li:hover {
+            transform: scale(1.1);
+        }
+        
+        .navbar a {
+            color: #fff;
+            font-weight: 500;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+        
+        h1,
+        h2,
+        h3 {
+            color: #222;
+        }
+        
+        pre {
+            background-color: #1e1e1e;
+            padding: 20px;
+            border-radius: 8px;
+            overflow-x: auto;
+            font-family: 'Courier New', monospace;
+            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.15);
+            border-left: 5px solid #007BFF;
+        }
+        
+        .selector {
+            color: #569CD6;
+        }
+        
+        .property {
+            color: #CE9178;
+        }
+        
+        .value {
+            color: #6A9955;
+        }
+        
+        .comment {
+            color: #6A9955;
+            font-style: italic;
+        }
+        
+        .text {
+            color: #f8f8f2;
+        }
+        
+        .rendered {
+            background-color: #fff;
+            padding: 20px;
+            border-left: 5px solid #28a745;
+            border-radius: 6px;
+            margin-top: 20px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .summary {
+            background-color: #e8f5e9;
+            padding: 15px 20px;
+            border-left: 5px solid #28a745;
+            border-radius: 6px;
+            margin-top: 20px;
+        }
+        
+        @media screen and (max-width:768px) {
+            .navbar ul {
+                flex-direction: column;
+                gap: 10px;
+                margin-top: 10px;
+            }
+        }
+        
+        .external {
+            color: green;
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo">Younash</div>
+        <ul>
+            <li><a href="base.html">Home</a></li>
+            <li><a href="html.html">HTML</a></li>
+            <li><a href="css.html">CSS</a></li>
+            <li><a href="bootstrap.html">Bootstrap</a></li>
+            <li><a href="javascript.html">JavaScript</a></li>
+            <li><a href="project.html">Project Demo</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>CSS Basics</h1>
+
+        <p>
+            CSS is the language we use to <strong>style a web page</strong>.<br> CSS stands for <strong>Cascading Style Sheets</strong>.<br> CSS describes how HTML elements are displayed on screen, paper, or other media.<br> CSS saves a lot of work because
+            it can control the layout of multiple web pages at once.<br> External stylesheets are stored in separate CSS files.
+        </p>
+
+        <h2>Example CSS</h2>
+
+        <h3>1. Inline CSS</h3>
+        <pre>
+<span class="selector">&lt;p</span> <span class="property">style=</span><span class="value">"color:red; font-weight:bold;"</span><span class="selector">&gt;</span>
+<span class="text">This is an inline CSS paragraph.</span>
+<span class="selector">&lt;/p&gt;</span>
+        </pre>
+        <div class="rendered">
+            <p style="color:red; font-weight:bold;">This is an inline CSS paragraph.</p>
+        </div>
+
+        <h3>2. Internal CSS</h3>
+        <pre>
+<span class="comment">/* Internal CSS example */</span>
+<span class="selector">p.internal</span> {
+  <span class="property">color</span>: <span class="value">blue</span>;
+  <span class="property">font-size</span>: <span class="value">18px</span>;
+}
+        </pre>
+        <div class="rendered">
+            <p style="color:blue; font-size:18px;">This is an internal CSS paragraph.</p>
+        </div>
+
+        <h3>3. External CSS</h3>
+        <pre>
+<span class="comment">/* External CSS example */</span>
+<span class="selector">.external</span> {
+  <span class="property">color</span>: <span class="value">green</span>;
+  <span class="property">font-style</span>: <span class="value">italic</span>;
+}
+        </pre>
+        <div class="rendered">
+            <p class="external">This paragraph is styled using external CSS.</p>
+        </div>
+
+        <h3>Summary</h3>
+        <div class="summary">
+            CSS can be applied in three ways:<br> 1. <strong>Inline CSS</strong> – directly in HTML element using <code>style</code>.<br> 2. <strong>Internal CSS</strong> – inside <code>&lt;style&gt;</code> tag in head.<br> 3. <strong>External CSS</strong>            – stored in separate CSS file linked using <code>&lt;link&gt;</code>.
+        </div>
+    </div>
+
+</body>
+
+</html>

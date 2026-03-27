@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Basics</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7f9;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        .navbar {
+            background-color: #1b1b1b;
+            color: #fff;
+            padding: 15px 30px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .navbar .logo {
+            font-weight: 600;
+            font-size: 24px;
+        }
+        
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            margin: 0;
+        }
+        
+        .navbar li:hover {
+            transform: scale(1.1);
+        }
+        
+        .navbar a {
+            color: #fff;
+            font-weight: 500;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+        
+        h1,
+        h2,
+        h3 {
+            color: #222;
+        }
+        
+        pre {
+            background-color: #1e1e1e;
+            padding: 20px;
+            border-radius: 8px;
+            overflow-x: auto;
+            font-family: 'Courier New', monospace;
+            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.15);
+            border-left: 5px solid #007BFF;
+        }
+        
+        .selector {
+            color: #569CD6;
+        }
+        
+        .property {
+            color: #CE9178;
+        }
+        
+        .value {
+            color: #6A9955;
+        }
+        
+        .comment {
+            color: #6A9955;
+            font-style: italic;
+        }
+        
+        .text {
+            color: #f8f8f2;
+        }
+        
+        .rendered {
+            background-color: #fff;
+            padding: 20px;
+            border-left: 5px solid #28a745;
+            border-radius: 6px;
+            margin-top: 20px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .summary {
+            background-color: #e8f5e9;
+            padding: 15px 20px;
+            border-left: 5px solid #28a745;
+            border-radius: 6px;
+            margin-top: 20px;
+        }
+        
+        @media screen and (max-width:768px) {
+            .navbar ul {
+                flex-direction: column;
+                gap: 10px;
+                margin-top: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="logo">Younash</div>
+        <ul>
+            <li><a href="base.html">Home</a></li>
+            <li><a href="html.html">HTML</a></li>
+            <li><a href="css.html">CSS</a></li>
+            <li><a href="bootstrap.html">Bootstrap</a></li>
+            <li><a href="javascript.html">JavaScript</a></li>
+            <li><a href="project.html">Project Demo</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>Bootstrap Basics</h1>
+
+        <p>
+            Bootstrap is a free front-end framework for faster and easier web development.<br> It includes HTML and CSS-based design templates for typography, forms, buttons, tables, navigation, modals, image carousels, and many others, as well as optional
+            JavaScript plugins.<br> Bootstrap allows developers to easily create responsive designs.<br><br>
+            <strong>Bootstrap Versions:</strong><br> Bootstrap 5 (released 2021) is the newest version, with new components, faster stylesheet, and more responsiveness.<br> Bootstrap 5 supports the latest stable releases of all major browsers and platforms
+            (Internet Explorer 11 and older is not supported).<br> The main difference from Bootstrap 3 & 4 is that Bootstrap 5 uses vanilla JavaScript instead of jQuery.
+        </p>
+
+        <h2>Bootstrap Example</h2>
+
+        <h3>1. Button Example</h3>
+        <pre>
+&lt;button class="btn btn-primary"&gt;Click Me&lt;/button&gt;
+        </pre>
+        <div class="rendered">
+            <button class="btn btn-primary">Click Me</button>
+        </div>
+
+        <h3>2. Alert Example</h3>
+        <pre>
+&lt;div class="alert alert-success" role="alert"&gt;
+  This is a Bootstrap alert!
+&lt;/div&gt;
+        </pre>
+        <div class="rendered">
+            <div class="alert alert-success" role="alert">
+                This is a Bootstrap alert!
+            </div>
+        </div>
+
+        <h3>Summary</h3>
+        <div class="summary">
+            Bootstrap is a front-end framework that provides ready-to-use components like buttons, forms, tables, navigation, and more.<br> Bootstrap makes web development faster and helps create responsive websites.<br> Bootstrap 5 uses vanilla JavaScript
+            instead of jQuery, providing lighter and modern code.<br> Use Bootstrap by linking its CSS & JS in your HTML file, and then use classes like <code>btn</code>, <code>alert</code>, <code>container</code> etc.
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
